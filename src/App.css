@@ -1,15 +1,17 @@
 .container {
     background-color: #c00025;
     width: 100%;
-    max-width: 550px;
+    max-width: 500px;
     border-radius: 15px;
     border: 2px solid grey;
     padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
 }
 .display {
     margin-top: 25px;
-    height: 100px;
-    width: 450px;
+    height: 80px;
+    width: 400px;
     border-radius: 50px;
     color: white;
     background-color: #322c2d;
@@ -19,68 +21,64 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
+    align-self: center;
+    margin: 2%;
   }
 
+.main {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
 
-  .App {
-      display: flex;
-      justify-content: space-around;
-  }
+.col-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 70%;
+}
 
-  .operators-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-  }
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 23%;
+}
 
-  .left-container {
-      flex-basis: 3;
-  }
-
-  .operator, .special, .number {
+button {
+    height: 85px;
+    width: 85px;
+    margin: 2%;
     border-radius: 50%;
-    font-size: 40px;
-    padding: 5px; 
-    width: 50px;
-    height: 50px;
-  }
+    box-shadow: 0px 3px#322c2d;
+    border: none;
+    font-size: 28px;
+    color: white;
+}
 
-  .operator {
-      margin: 12% 12%;
-      height: 75%;
-      width: 95%;
-  }
+.operator {
+    background-color: rgb(0,114, 145);
+    margin: 7% 0;
 
-  .specials-container {
-      display: flex;
-      justify-content: space-evenly;
-  }
+}
 
-  .special {
-      width: 29%;
-      height: 29%;
-      margin: 2% 2%;
-      background-color: blue;
-      color: white;
-      border: none;
-      box-shadow: 0px 2px black;
+.number {
+    margin: 2%;
+    background-color: rgb(9, 67, 119)
+}
 
-  }
+.special {
+    margin: 2%;
+    background-color: rgb(11, 93, 155)
+}
 
-  .numbers-container {
-      display: flex;
-      justify-content: space-evenly;
-      flex-wrap: wrap;
-      
-  }
+.number:nth-child(13){
+    width: 205px;
+    border-radius: 55px;
+}
 
-  .number {
-      width: 25%;
-      height: 35%;
-      margin: 4% 4%;
-      background-color: navy;
-      color: white;
-      border: none;
-      box-shadow: 0px 2px black;
-
-  }
+.logo {
+    padding: 7%;
+    padding-bottom: 0;
+}
