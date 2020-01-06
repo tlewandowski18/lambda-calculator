@@ -9,8 +9,6 @@ import Display from "./components/DisplayComponents/Display"
 import Logo from "./components/DisplayComponents/Logo";
 import { parse } from "path";
 
-
-
 function App() {
   const [display, setDisplay] = useState("0")
   const [storedValue, setStoredValue] = useState("")
@@ -19,7 +17,6 @@ function App() {
   function handleNumberClick(e) {
     setDisplay(prevDisplay => prevDisplay === "0" ? e.target.value : prevDisplay + e.target.value)
   }
-
 
   function handleOperatorClick(e){
     const clickedOperator = e.target.value
@@ -34,7 +31,6 @@ function App() {
       setStoredValue(() => "")
       setOperator(() => "")
     } 
-    
   }
 
   function handleSpecialClick(e){
@@ -43,11 +39,11 @@ function App() {
       setStoredValue(() => "")
       setOperator(() => "")
     } else if (e.target.value === "+/-") {
-      const num = parseInt(display, 10)
+      const num = parseFloat(display, 10)
       const negNum = -num
       setDisplay(() => negNum.toString())
     } else {
-      const num = parseInt(display, 10)
+      const num = parseFloat(display, 10)
       const perNum = num / 100
       setDisplay(() => perNum.toString())
     }
