@@ -1,9 +1,13 @@
 import React from "react";
+import {withClickEffect} from "../../../HOCs/withClickEffect"
 
-const NumberButton = () => {
+
+const NumberButton = (props) => {
   return (
-    <>
-      {/* Display a button element rendering the data being passed down from the parent container on props */}
-    </>
+    <button className="number" onMouseDown={props.handleClickDown} onMouseUp={props.handleClickUp} onClick={props.handleNumberClick} value={props.num}>
+      {props.num}
+    </button>
   );
 };
+
+export default withClickEffect(NumberButton);
